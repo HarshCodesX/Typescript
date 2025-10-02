@@ -21,12 +21,7 @@ let num = 55.5;
 
 
 
-
-
-
-
-
-//any keyword
+//any keyword 
 let hero: string;
 function getHero(){
     return "thor";
