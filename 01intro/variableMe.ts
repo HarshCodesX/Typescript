@@ -17,4 +17,21 @@ let isLoggedIn: boolean = false;
 let num = 55.5;
 // num.toUpperCase(); //if we uncomment this, it will give that squiggly line under toUpperCase method
 
+
+
+
+
+
+
+
+
+
+//any keyword
+let hero: string;
+function getHero(){
+    return "thor";
+}
+
+hero = getHero();
+
 export {}
