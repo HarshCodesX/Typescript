@@ -32,15 +32,53 @@
 
 
 //Type Aliases
+// type User = {
+//     name: string;
+//     email: string;
+//     isActive: boolean
+// }
+
+// function createUser(user: User): User{
+//     return {name: "qwerty", email: "h@h.com", isActive: false}
+// }
+// createUser({name: "harsh", email: "h@h.com", isActive: true})
+
+
+
+
+
+
+
+
+//Readonly and optional in typescript
 type User = {
+    readonly _id: string;
     name: string;
     email: string;
-    isActive: boolean
+    isActive: boolean;
+    credCardDetails?: number
 }
 
-function createUser(user: User): User{
-    return {name: "qwerty", email: "h@h.com", isActive: false}
+let myUser: User = {
+    _id: "12345",
+    name: "harsh",
+    email: "h@h.com",
+    isActive: false
 }
-createUser({name: "harsh", email: "h@h.com", isActive: true})
+
+type CardNumber = {
+    cardnumber: string;
+}
+
+type CardDate = {
+    cardDate: string
+}
+
+type CartDetails = CardNumber & CardDate & {
+    cvv: number
+}
+
+myUser.email = "h@daksh.com";
+// myUser._id = "7987"; //it will throw error as _id is readonly
 
 export {}
