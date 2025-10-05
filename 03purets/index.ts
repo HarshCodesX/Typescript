@@ -51,6 +51,6 @@ class User {
 }
 
 const daksh = new User("d@d.com", "daksh", "1234");
-// daksh.deleteToken; //can not do that as this function is private
+// daksh.deleteToken; //can not do that as this function is private like other private properties
 
 export {}
