@@ -17,7 +17,7 @@
 //another way for declaring classes in typescript
 
 class User {
-    private _couseCount = 1;
+    protected _courseCount = 1;
     readonly city:string = "Jaipur"
     constructor (public email: string, public name: string, private userId: string){
 
@@ -52,5 +52,13 @@ class User {
 
 const daksh = new User("d@d.com", "daksh", "1234");
 // daksh.deleteToken; //can not do that as this function is private like other private properties
+
+//Inheritance
+class SubUser extends User {
+    isFamily: boolean = true;
+    changeCourseCount(){
+        this._courseCount = 4;
+    }
+}
 
 export {}
