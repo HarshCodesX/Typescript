@@ -28,3 +28,16 @@ interface Bottle {
 }
 
 const result: Bottle = identityFour<Bottle>({brand: "puma", type: 4});
+
+//generics part 2
+
+function getSearchProducts<T>(products: T[]): T{ // here we are taking an array of T types, now T can be anything such as array of numbers
+    const myIndex = 3;
+    return products[myIndex];
+}
+
+//converting above fucntion to arrow function
+const getMoreSearchProducts = <T,>(products: T[]): T => { //<T> and <T,>, both means same
+    const myIndex = 4;
+    return products[myIndex];
+}
