@@ -32,7 +32,7 @@ class User {
     }
 
     get courseCount(): number{
-        return this._couseCount;
+        return this._courseCount;
     }
 
     // set courseCount(courseNum): void{
@@ -45,7 +45,7 @@ class User {
             throw new Error("Course count should be more than 1");
         }
         else{
-            this._couseCount = courseNum;
+            this._courseCount = courseNum;
         }
     }
 }
