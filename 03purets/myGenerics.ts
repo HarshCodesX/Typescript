@@ -41,3 +41,41 @@ const getMoreSearchProducts = <T,>(products: T[]): T => { //<T> and <T,>, both m
     const myIndex = 4;
     return products[myIndex];
 }
+
+
+
+
+//generic classes in ts, next video of above code
+
+interface Database {
+    connection: string,
+    username: string,
+    password: string
+}
+
+function anotherFunction<T, U extends Database>(valOne: T, valTwo: U): object{
+    return {
+        valOne,
+        valTwo
+    }
+}
+
+anotherFunction(3, {connection: "qwerty", username: "harsh", password: "qwert123"});
+
+interface Quiz{
+    name: string,
+    type: string
+}
+
+interface Course{
+    name: string,
+    author: string,
+    subject: string
+}
+
+class Sellable<T>{
+    public cart: T[] = [];
+    addToCart(product: T){
+        this.cart.push(product);
+    }
+}
