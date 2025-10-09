@@ -25,3 +25,33 @@ function printAll(strs: string | string[] | null){
         }
     }
 }
+
+//next video "Instance and type predicates"
+
+function logValue(x: Date | string){
+    if(x instanceof Date){
+        console.log(x.toUTCString());
+    }
+    else{
+        console.log(x.toUpperCase());
+    }
+}
+
+
+type Fish = {swim: () => void};
+type Bird = {fly: () => void};
+
+function isFish(pet: Fish | Bird): pet is Fish{
+    return (pet as Fish).swim !== undefined
+}
+
+function getFood(pet: Fish | Bird){
+    if(isFish(pet)){ //it will use the above function to identify whether it is a bird or fish
+        pet //but if you hover over here, it will still be confused either it is a bird or fish, though it wont throw any error, but now we have mentioned in above function, that return type will be Fish, so now it wont be confused
+        return "Fish food";
+    }
+    else {
+        pet
+        return "bird food";
+    }
+}
