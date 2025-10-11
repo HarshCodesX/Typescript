@@ -97,3 +97,5 @@ function getArea(shape: Shape){
             return _defaultforshape;
     }
 }
+
+//ts ended, now next playlist
